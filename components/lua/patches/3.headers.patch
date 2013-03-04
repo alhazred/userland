@@ -1,0 +1,68 @@
+--- src/lua.h.~1~	Fri Apr 20 06:18:26 2012
++++ src/lua.h	Tue Oct 16 16:37:24 2012
+@@ -9,6 +9,10 @@
+ #ifndef lua_h
+ #define lua_h
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ #include <stdarg.h>
+ #include <stddef.h>
+ 
+@@ -435,5 +439,8 @@
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ ******************************************************************************/
+ 
++#ifdef __cplusplus
++}
++#endif
+ 
+ #endif
+
+--- src/lualib.h.~1~	Thu Dec  8 04:11:37 2011
++++ src/lualib.h	Tue Oct 16 16:34:40 2012
+@@ -8,6 +8,10 @@
+ #ifndef lualib_h
+ #define lualib_h
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ #include "lua.h"
+ 
+ 
+@@ -51,5 +55,8 @@
+ #define lua_assert(x)	((void)0)
+ #endif
+ 
++#ifdef __cplusplus
++}
++#endif
+ 
+ #endif
+--- src/lauxlib.h.~1~	Tue Nov 29 07:55:08 2011
++++ src/lauxlib.h	Tue Oct 16 16:34:40 2012
+@@ -8,6 +8,9 @@
+ #ifndef lauxlib_h
+ #define lauxlib_h
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
+ 
+ #include <stddef.h>
+ #include <stdio.h>
+@@ -206,7 +209,9 @@
+ 
+ #endif
+ 
+-
++#ifdef __cplusplus
++}
+ #endif
+ 
++#endif
+
